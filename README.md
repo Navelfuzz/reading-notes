@@ -11,4 +11,4 @@ Growth mindset is being poised for an evolving skillset involving many different
 
 Written by: [Jonathon Stillson](https://www.github.com/Navelfuzz77).
 
-![Picture](reading-notes/IMG_20190219_144501~2.jpg)
+![Picture](/reading-notes/IMG_20190219_144501~2.jpg)

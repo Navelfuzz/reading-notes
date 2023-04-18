@@ -13,10 +13,6 @@ Written by: [**Jonathon Stillson**](https://www.github.com/Navelfuzz77).
 
 ![Picture](IMG_1.jpg)
 
-:family_man_boy:
 :guitar:
 :dog:
-:desktop_computer:
-:weight_lifting:
-:mage_man:
 

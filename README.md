@@ -13,4 +13,9 @@ Written by: **[Jonathon Stillson](https://www.github.com/Navelfuzz77).
 
 ![Picture](IMG_1.jpg)
 
-:EMOJICODE: :family_man_boy:	:guitar:	:dog:  :desktop_computer:		:weight_lifting: 	:mage_man:
+:family_man_boy:
+:guitar:
+:dog:
+:desktop_computer:
+:weight_lifting:
+:mage_man:

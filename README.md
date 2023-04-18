@@ -9,4 +9,4 @@ Growth mindset is being poised for an evolving skillset involving many different
 2. Continuous improvement means forming new habits when better solutions are discovered.
 3. Never shy away from curiousity which may drive wisdom. 
 
-Written by: [Jonathon Stillson}(https://www.github.com/Navelfuzz77)
+Written by: [Jonathon Stillson}(https://www.github.com/Navelfuzz77).

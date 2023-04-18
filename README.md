@@ -1,1 +1,3 @@
-# navelfuzz77.github.io-reading-notes
+# reading-notes
+
+## My reading journal for Code Fellows

@@ -16,7 +16,7 @@
 ### Answers
 
 1. Markdown is a lightweight... markup language. Meaning it is a simplified formatting one can use to create pages (on GitHub for these purposes).
-2. We use it so we can very easily format web browser docs when we don't need/want extensive customization. 
+2. We use it so we can very easily format web browser docs when we don't need/want extensive customization.
 3. The "#" creates Markdown headings. 1 "#" is the largest heading. 6 "#" creates the smallest heading.
 4. For **bold** and *italic* formating we use `*`. For example: 2 for bold (pre & post the desired text) `**this text is bold**`. For *italics* `*this text is italic*`
 5. The appropriate syntax for a link is as follows:

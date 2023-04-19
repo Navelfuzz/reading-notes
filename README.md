@@ -1,3 +1,3 @@
-# reading-notes 
+# reading-notes
 
 Author: Jonathon Stillson

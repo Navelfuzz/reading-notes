@@ -9,7 +9,7 @@ the Code Fellows Coursework for modules 102, 201, 301, and 401 (JAVA).
 
 ### **Code 102**
 
-1. [class-01.md](/102/class-01)
+1. [class-01.md](/reading-notes/102/class-01)
 2. [class-02.md](/102/class-02)
 3. [class-03.md](/102/class-03)
 4. [class-04.md](/102/class-04)

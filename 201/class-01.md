@@ -6,6 +6,8 @@ In this section we cover the basics of getting started with web-development. It 
 
 ### Questions
 
+___
+
 1. Compose a short poem describing how HTTP sends data between computers.
 2. Describe how HTML, CSS, and JS files are “parsed” in the browser.
 3. How can you find images to add to a Website?
@@ -14,7 +16,9 @@ In this section we cover the basics of getting started with web-development. It 
 
 ### Answers
 
-- Poem about data transfer:
+___
+
+- Poem about data transfer[^1].
 
         HTTP, the protocol of the web
         Sends data between computers, no sweat
@@ -36,7 +40,7 @@ In this section we cover the basics of getting started with web-development. It 
         It's a protocol we all rely on, day to day
         Sending data between computers, in its own special way.
 
-- Additional poem about packet loss.
+- Additional poem about packet loss[^2].
 
         I am a packet, lost in the fray
         A lost little piece, on its way
@@ -75,6 +79,8 @@ In this section we cover the basics of getting started with web-development. It 
 
 ### Questions
 
+___
+
 1. What is an HTML attribute?
 2. Describe the Anatomy of an HTMl element.
 3. What is the Difference between `<article>` and `<section>` element tags?
@@ -84,14 +90,20 @@ In this section we cover the basics of getting started with web-development. It 
 
 ### Answers
 
+___
+
 ## How to start to design a wesite
 
 ### Questions
+
+___
 
 1. What is the first step to designing a Website?
 2. What is the most important question to answer when designing a Website?
 
 ### Answers
+
+___
 
 1. Determine what it is you want to accomplish and how a website will help you do that. Then plan out what needs to be done and develop an ordered task list. *Project Ideation*
 2. What is your goal?
@@ -100,10 +112,14 @@ In this section we cover the basics of getting started with web-development. It 
 
 ### Questions
 
+___
+
 1. Why should you use an `<h1>` element over a `<span>` element to display a top level heading?
 2. What are the benefits of using semantic tags in our HTML?
 
 ### Answers
+
+___
 
 1. Being a semantic element it identifies the imbedded text as something, in this case, a top level header.
 2. Semantic tags tie into SEO, accessibility functions, keeps code organized and labeled, readable/understandable, follows naming conventions.
@@ -112,10 +128,26 @@ In this section we cover the basics of getting started with web-development. It 
 
 ### Questions
 
+___
+
 1. Describe 2 things that require JavaScript in the Browser?
 2. How can you add JavaScript to an HTML document?
 
 ### Answers
 
+___
+
 1. JavaScript allows your website to have dynamic features, like modifications to HTML and CSS to update UI. Also allows you to access APIs.
 2. `<script>` element.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+___
+
+##### 1. ChatGPT, "Reflections on HTML"[^1].
+##### 2. ChatGPT, "The lost packet"[^2].

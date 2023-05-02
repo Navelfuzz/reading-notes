@@ -67,13 +67,13 @@ ___
 1. An if statement checks a __ and if it evaluates to ___, then the code block will execute.
 2. What is the use of an `else if`?
 3. List 3 different types of comparison operators.
-4. What is the difference between the logical operator && and ||?
+4. What is the difference between the logical operator `&&` and `||`?
 
 ### *Answers:*
 
 1. Condition
 2. It allows you to test another condition should the first not be true.
 3. `==` is the equal to operator, `===` means equal value and equal type, `!=` means not equal.
-4. `&&` (logical and) ties two separate variables/conditions/objects together. This means you can write a function to sort of glue two separate variables together, or you can write a discrimination function that returns true only if both variables are present. Whereas `||` designates 'or' and only one of the variables/conditions/objects has to be 'true' or meet criteria. This is not an exclusive logical operator it can still find both as meeting criteria.
+4. `&&` (logical and) ties two separate variables/conditions/objects together. This means you can write a function to sort of glue two separate variables together, or you can write a discrimination function that returns true only if both variables are present. Whereas `||` designates 'or' and only one of the variables/conditions/objects has to be 'true' or meet criteria. This is not an exclusive logical operator it can still find both as meeting criteria.g
 
 ___

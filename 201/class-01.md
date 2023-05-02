@@ -18,7 +18,7 @@ ___
 
 ___
 
-- Poem about data transfer[^1].
+- Poem about data transfer. 
 
         HTTP, the protocol of the web
         Sends data between computers, no sweat
@@ -40,7 +40,7 @@ ___
         It's a protocol we all rely on, day to day
         Sending data between computers, in its own special way.
 
-- Additional poem about packet loss[^2].
+- Additional poem about packet loss.
 
         I am a packet, lost in the fray
         A lost little piece, on its way
@@ -149,5 +149,4 @@ ___
 
 ___
 
-##### 1. ChatGPT, "Reflections on HTML"[^1].
-##### 2. ChatGPT, "The lost packet"[^2].
+##### Poetry written by ChatGPT

@@ -68,3 +68,7 @@ ___
 4. The output is erreneous because you would need to concatenate the values as an output. You cannot do math between numbers and words.
 5. Age resrictions for website content.
 6. Writh an output once. Creat a loop that displays it 5 times.
+
+___
+
+Author: Jonathon Stillson

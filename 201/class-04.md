@@ -59,3 +59,7 @@ ___
 ### *Answers*
 
 1. Checking each others work, learning each others shortcuts.
+
+## Things I want to know more about
+
+Differences between JS terminology and that of C++

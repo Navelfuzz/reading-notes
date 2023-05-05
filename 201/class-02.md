@@ -77,7 +77,3 @@ ___
 4. `&&` (logical and) ties two separate variables/conditions/objects together. This means you can write a function to sort of glue two separate variables together, or you can write a discrimination function that returns true only if both variables are present. Whereas `||` designates 'or' and only one of the variables/conditions/objects has to be 'true' or meet criteria. This is not an exclusive logical operator it can still find both as meeting criteria.g
 
 ___
-
-## Things I want to know more about
-
-Differences between JS terminology and that of C++

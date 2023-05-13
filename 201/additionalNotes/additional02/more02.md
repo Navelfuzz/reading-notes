@@ -606,5 +606,168 @@ Later in the course, you will encounter many other examples of shorthand propert
 
 Try using the declarations (above) in your own CSS exercise to become more familiar with how it works. You can also experiment with different values.
 
-***Warning***: *One less obvious aspect of using CSS shorthand is how omitted values reset. A value not specified in CSS shorthand reverts to its initial value. This means an omission in CSS shorthand can override previously set values.*
+***Warning***: *One less obvious aspect of using CSS shorthand is how omitted values reset. A value not specified in CSS shorthand reverts to its
+initial value. This means an omission in CSS shorthand can override previously set values.*
 
+___
+
+# JavaScript Basics
+
+## Conditionals
+
+Conditionals are code structure to test if an expression returns true or not. Such as the if 
+else statement:
+
+    let iceCream = "chocolate";
+    if (iceCream === "chocolate") {
+      alert("Yay, I love chocolate ice cream!");
+    } else {
+      alert("Awwww, but chocolate is my favorite…");
+    }
+
+the expression inside the `if()` is the test. This test is determining whether the stored
+value within the variable `iceCream` is an equal string to "chocolate". This comparison will
+return true. If it returns false, the second block of code (after the `else` will run instead).
+
+## Functions
+
+***Note***: *The return statement tells the browser to return the result variable out of the function so it is available to use. This is necessary
+because variables defined inside functions are only available inside those functions. This is called variable scoping. (Read more about variable scoping.)*
+
+## Events
+
+Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response.
+The most obvious example is handling the click event, which is fired by the browser when you click on something with your mouse. To demonstrate this,
+enter the following into your console, then click on the current webpage:
+
+    document.querySelector("html").addEventListener("click", function () {
+      alert("Ouch! Stop poking me!");
+    });
+
+There are a number of ways to attach an event handler to an element. Here we select the `<html>` element. We then call its `addEventListener()` function,
+passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
+
+The function we just passed to `addEventListener()` here is called an anonymous function, because it doesn't have a name. There's an alternative way of
+writing anonymous functions, which we call an arrow function. An arrow function uses `() =>` instead of function `():`
+
+    document.querySelector("html").addEventListener("click", () => {
+      alert("Ouch! Stop poking me!");
+    });
+
+___
+
+# Making Decision in Code: Conditionals
+
+## The Basics: The If...Else
+
+    if (condition) {
+      /* code to run if condition is true */
+    } else {
+      /* run some other code instead */
+    }
+
+
+## Else if
+
+There is a way to chain on extra choices/outcomes to your `if...else` — using `else if`.
+Each extra choice requires an additional block to put in between `if () { }` and `else { }`.
+
+Weather Forecast App:
+
+**HTML**
+
+    <label for="weather">Select the weather type today: </label>
+    <select id="weather">
+      <option value="">--Make a choice--</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+
+    <p></p>
+
+**JavaScript**
+
+    const select = document.querySelector("select");
+    const para = document.querySelector("p");
+
+    select.addEventListener("change", setWeather);
+
+    function setWeather() {
+      const choice = select.value;
+
+      if (choice === "sunny") {
+        para.textContent =
+          "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+      } else if (choice === "rainy") {
+        para.textContent =
+          "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+      } else if (choice === "snowing") {
+        para.textContent =
+          "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+      } else if (choice === "overcast") {
+        para.textContent =
+          "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+      } else {
+        para.textContent = "";
+      }
+    }
+
+![Weather App](weatherApp.png)
+
+## Switch Statements (Switch Board)
+
+    switch (expression) {
+      case choice1:
+        run this code
+        break;
+
+      case choice2:
+        run this code instead
+        break;
+
+      // include as many cases as you like
+
+      default:
+        actually, just run this code
+    }
+
+Here we've got:
+
+1. The keyword `switch`, followed by a set of parentheses.
+2. An expression or value inside the parentheses.
+3. The keyword `case`, followed by a choice that the expression/value could be, followed by a colon.
+4. Some code to run if the choice matches the expression.
+5. A `break` statement, followed by a semicolon. If the previous choice matches the expression/value,
+the browser stops executing the code block here, and moves on to any code that appears below
+the switch statement.
+6. As many other cases (bullets 3–5) as you like.
+7. The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5),
+except that `default` does not have a choice after it, and you don't need the `break` statement as there
+is nothing to run after this in the block anyway. This is the default option that runs if
+none of the choices match.
+
+**Note**: *You don't have to include the `default` section — you can safely omit it if there is no chance
+that the expression could end up equaling an unknown value. If there is a chance of this,
+however, you need to include it to handle unknown cases.*
+
+## Ternary Operator
+
+There is one final bit of syntax we want to introduce you to before we get you to play with some examples.
+The ternary or conditional operator is a small bit of syntax that tests a condition and returns one
+value/expression if it is true, and another if it is false — this can be useful in some situations, and can
+take up a lot less code than an if...else block if you have two choices that are chosen between via a true/
+false condition. The pseudocode looks like this:
+
+    condition ? run this code : run this code instead
+
+So let's look at a simple example:
+
+    const greeting = isBirthday
+      ? "Happy birthday Mrs. Smith — we hope you have a great day!"
+      : "Good morning Mrs. Smith.";
+    Copy to ClipboardCopy to ClipboardCopy to Clipboard
+
+Here we have a variable called isBirthday — if this is true, we give our guest a happy birthday message; if
+not, we give her the standard daily greeting.

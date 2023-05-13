@@ -36,7 +36,7 @@ HTML element for the job.
 
 ## *Lists*
 
-### Unordered
+### *Unordered*
 
 Unordered lists use the `<ul>` element wrapped around all entirety of the list. `<li>` is
 wrapped around each individual item:
@@ -48,7 +48,7 @@ wrapped around each individual item:
       <li>hummus</li>
     </ul>
 
-### Ordered
+### *Ordered*
 
     <ol>
       <li>Drive to the end of the road</li>
@@ -110,7 +110,7 @@ taxonomic designation, technical terms, a thought…
 `<u>` is used to convey a meaning traditionally conveyed by underline: proper name,
  misspelling…
 
-## Other Examples Scientifit, Foreign Language, Misspelling, Definitions
+## Other Examples: Scientific, Foreign Language, Misspelling, Definitions
 
     <!-- scientific names -->
     <p>
@@ -138,7 +138,7 @@ taxonomic designation, technical terms, a thought…
 
 ___
 
-## Description Lists
+### ***Description Lists***
 
 Description lists use a different wrapper than the other list types -- `<dl>`; in addition
 each term is wrapped in a `<dt>` (description term) element, and each description is
@@ -171,9 +171,9 @@ wrapped in a `<dd>`.
       </dd>
     </dl>
 
-## Quotations
+## *Quotations*
 
-### Blockquotes
+### ***Blockquotes***
 
 If a section of ablock level content (paragraph, or multiple paragraphs, a list, etc...) is
 quoted from somewhere else, you should wrap it inside a `<blockquote>` element to
@@ -200,7 +200,7 @@ To turn this into a block quote:
 
 ![Blockquote Example](blockquote.png)
 
-### Inline Quotations
+### ***Inline Quotations***
 
 Inline quotations work exactly the same with the `<q>` element.
 
@@ -213,7 +213,7 @@ Inline quotations work exactly the same with the `<q>` element.
 
 ![Inline Quotation](inlineQuote.png)
 
-### Citations
+### ***Citations***
 
 The content of the `cite` attribute cannot be linked (downside):
 
@@ -244,7 +244,7 @@ Citations are italic by default.
 
 ![Citation](citation.png)
 
-## Abbreviations
+## *Abbreviations*
 
 `<abbr>` is the abbreviation element. Used to wrap abbreviations or acronyms. Then provide
 full expansion of the term in plain text on the first use.
@@ -265,7 +265,7 @@ Looks like:
 
 ![Abbreviation Example](abbreviation.png)
 
-## Contact Details
+## *Contact Details*
 
     <address>
       <p>
@@ -293,7 +293,7 @@ correct to use it in the footer of a site to include the contact information of 
 site, or inside an article for the contact details of the author, but not to mark up a list
 of addresses unrelated to the content of that page.*
 
-## Superscript and Subscript
+### ***Superscript and Subscript***
 
 `<sup>` : superscripts; `<sub>` : subscripts
 
@@ -308,7 +308,7 @@ The output of this code looks like so:
 
 ![Super and Sub scripts](supSub.png)
 
-## Representing Computer Code
+## **Representing Computer Code**
 
 `<code>`: For marking up generic pieces of computer code.
 `<pre>`: For retaining whitespace (generally code blocks) — if you use indentation or excess
@@ -320,32 +320,291 @@ be rendered identically to how you see it in your text editor.
 `<samp>`: For marking up the output of a computer program.
 
     <pre><code>const para = document.querySelector('p');
-    
+
     para.onclick = function() {
       alert('Owww, stop poking me!');
     }</code></pre>
-    
+
     <p>
       You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
       <code>&lt;center&gt;</code>.
     </p>
-    
+
     <p>
       In the above JavaScript example, <var>para</var> represents a paragraph
       element.
     </p>
-    
+
     <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
-    
+
     <pre>$ <kbd>ping mozilla.org</kbd>
     <samp>PING mozilla.org (63.245.215.20): 56 data bytes
     64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
 
+![Code Elements](codeElements.png)
 
+## Marking up Time and Date
 
+HTML also provides the `<time>` element for marking up times and dates in a machine-readable
+format. For example:
 
+    <time datetime="2016-01-20">20 January 2016</time>
 
+But these different forms cannot be easily recognized by computers — what if you wanted
+to automatically grab the dates of all events in a page and insert them into a calendar?
+The `<time>` element allows you to attach an unambiguous, machine-readable time/date
+for this purpose.
 
+The basic example above just provides a simple machine readable date, but there are many
+other options that are possible, for example:
 
+    <!-- Standard simple date -->
+    <time datetime="2016-01-20">20 January 2016</time>
+    <!-- Just year and month -->
+    <time datetime="2016-01">January 2016</time>
+    <!-- Just month and day -->
+    <time datetime="01-20">20 January</time>
+    <!-- Just time, hours and minutes -->
+    <time datetime="19:30">19:30</time>
+    <!-- You can do seconds and milliseconds too! -->
+    <time datetime="19:30:01.856">19:30:01.856</time>
+    <!-- Date and time -->
+    <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+    <!-- Date and time with timezone offset -->
+    <time datetime="2016-01-20T19:30+01:00">
+      7.30pm, 20 January 2016 is 8.30pm in France
+    </time>
+    <!-- Calling out a specific week number -->
+    <time datetime="2016-W04">The fourth week of 2016</time>
 
+___
+
+# Applying CSS to HTML
+
+## External Stylesheet
+
+An external stylesheet contains CSS in a separate file with a `.css` extension. Within an
+HTML document `<!DOCTYPE html>` it is referenced from a `<link>` element.
+
+    <!DOCTYPE html>
+    <html lang="en-GB">
+      <head>
+        <meta charset="utf-8" />
+        <title>My CSS experiment</title>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <h1>Hello World!</h1>
+        <p>This is my first CSS example</p>
+      </body>
+    </html>
+
+The CSS stylesheet file might look like this:
+
+    h1 {                      //makes style changes to `<h1>` elements
+      color: blue;
+      background-color: yellow;
+      border: 1px solid black;
+    }
+
+    p {                       //makes style changes to `<p>` elements
+      color: red;
+    }
+
+The `href` attribute of the `<link>` element needs to reference a file in your file system.
+
+    <!-- Inside a subdirectory called styles inside the current directory -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory -->
+    <link rel="stylesheet" href="styles/general/style.css" />
+
+    <!-- Go up one directory level, then inside a subdirectory called styles -->
+    <link rel="stylesheet" href="../styles/style.css" />
+
+## Internal Stylesheet
+
+This is when your stylesheet is within your `<!DOCTYPE html>` HTML Document within the `<head>`
+
+    <!DOCTYPE html>
+    <html lang="en-GB">
+      <head>
+        <meta charset="utf-8" />
+        <title>My CSS experiment</title>
+        <style>
+          h1 {
+            color: blue;
+            background-color: yellow;
+            border: 1px solid black;
+          }
+
+          p {
+            color: red;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Hello World!</h1>
+        <p>This is my first CSS example</p>
+      </body>
+    </html>
+
+***Avoid using CSS in this manner when possible.***
+
+## Selectors
+
+a ***selector*** targets HTML to apply styles to content. Each CSS rule starts with a selector or a list
+of selectors in order to tell the browser which element(s) the rules should apply to. All the examples below
+are valid selectors or lists of selectors.
+
+    h1
+    a:link
+    .manythings
+    #onething
+    *
+    .box p
+    .box p:first-child
+    h1, h2, .intro
+
+### *Specificity*
+
+Consider the following stylesheet: with a `p` selector that sets paragraph text to blue. However, there is 
+also a class that sets the text of the selected elements to red.
+
+    .special {
+      color: red;
+    }
+
+    p {
+      color: blue;
+    }
+
+Suppose that in the HTML of our document, we have a paragraph with a class of `special`. Both rules apply
+which selector prevails? Is it red or blue?
+
+    <p class="special">What color am I?</p>
+
+CSS has rules to control which selector is stronger in the event of a conflict. These rules are called 
+***cascade*** and ***specificity***. The text will appear blue. THis is becuase of the **cascade rule**: the
+declaration that appears later in the stylesheet overules the former.
+
+    p {             //sets `p` color to red
+      color: red;
+    }
+
+    p {             //sets `p` color to blue, overuling the previous styling
+      color: blue;
+    }
+
+## Properties and Values
+
+**Properties**: These are human-readable identifiers that indicate which stylistic features you want
+to modify. For example, `font-size`, `width`, `background-color`.
+**Values**: Each property is assigned a value. This value indicates how to style the property.
+
+    h1 {
+      color: blue;              //color is a property, blue is the value
+      background-color: yellow; //when property and value are together the pairing is called
+    }                           //a *CSS Declaration*
+
+Relevant properties: `font-size`, `width`, `background-color`, `color`, `border`
+
+## Functions
+
+### The calc() function
+
+    <div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
+
+    .outer {
+      border: 5px solid black;
+    }
+
+    .box {
+      padding: 10px;
+      width: calc(90% - 30px);
+      background-color: rebeccapurple;
+      color: white;
+    }
+
+In the above example `calc()` defines the width of this box to be 90% of the containing
+block width.
+
+### Transform Functions
+
+Another example would be the various values for transform, such as rotate().
+
+    <div class="box"></div>
+
+    .box {
+      margin: 30px;
+      width: 100px;
+      height: 100px;
+      background-color: rebeccapurple;
+      transform: rotate(0.8turn);
+    }
+
+The output from the above code looks like this:
+
+![Transform Function Rotate](transformFunc.png)
+
+## @rules
+
+CSS @rules (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example, @import imports a stylesheet into another CSS stylesheet:
+
+    @import "styles2.css";
+
+One common @rule that you are likely to encounter is @media, which is used to create media queries. Media queries use conditional logic for applying CSS styling.
+
+In the example below, the stylesheet defines a default pink background for the <body> element. However, a media query follows that defines a blue background if the browser viewport is wider than 30em.
+
+    body {
+      background-color: pink;
+    }
+
+    @media (min-width: 30em) {
+      body {
+        background-color: blue;
+      }
+    }
+
+You will encounter other @rules throughout these tutorials.
+
+See if you can add a media query that changes styles based on the viewport width. Change the width of your browser window to see the result.
+
+## Shorthands
+
+Some properties like font, background, padding, border, and margin are called shorthand properties. This is because shorthand properties set several values in a single line.
+
+For example, this one line of code:
+
+    /* In 4-value shorthands like padding and margin, the values are applied
+       in the order top, right, bottom, left (clockwise from the top). There are also other
+       shorthand types, for example 2-value shorthands, which set padding/margin
+       for top/bottom, then left/right */
+    padding: 10px 15px 15px 5px;
+
+is equivalent to these four lines of code:
+
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+
+This one line:
+
+    background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+
+is equivalent to these five lines:
+
+    background-color: red;
+    background-image: url(bg-graphic.png);
+    background-position: 10px 10px;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+
+Later in the course, you will encounter many other examples of shorthand properties. MDN's CSS reference is a good resource for more information about any shorthand property.
+
+Try using the declarations (above) in your own CSS exercise to become more familiar with how it works. You can also experiment with different values.
+
+***Warning***: *One less obvious aspect of using CSS shorthand is how omitted values reset. A value not specified in CSS shorthand reverts to its initial value. This means an omission in CSS shorthand can override previously set values.*
 

@@ -48,6 +48,7 @@ use CSS for that rather than putting the text into an image. However, If you rea
 should supply the text inside the `alt` attribute.
 
 ### *Width and height*
+
 You can use the `width` and `height` attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use `Cmd + I` to get the info display up for the image file. Returning to our example, we could do this:
 
     <img
@@ -131,6 +132,7 @@ Summing up: if an image has meaning, in terms of your content, you should use an
 purely decoration, you should use CSS background images.
 
 ___
+
 ## Common Image Types
 
 The image file formats that are most commonly used on the web are listed below.
@@ -142,7 +144,7 @@ The image file formats that are most commonly used on the web are listed below.
 |GIF|Graphics Interchange Format|`image/gif`|`.gif`|Good choice for simple images and animations. Prefer PNG for lossless and indexed still images, and consider WebP, AVIF or APNG for animation sequences. **Supported**: Chrome, Edge, Firefox, IE, Opera, Safari.|
 |JPEG|Joint Photographic Expert Group image|`image/jpeg`|`.jpg, .jpeg, .jfif, .pjpeg, .pjp`|Good choice for lossy compression of still images (currently the most popular). Prefer PNG when more precise reproduction of the image is required, or WebP/AVIF if both better reproduction and higher compression are required.**Support**: Chrome, Edge, Firefox, IE, Opera, Safari.|
 |PNG|Portable Network Graphics|`image/png`|`.png`|PNG is preferred over JPEG for more precise reproduction of source images, or when transparency is needed. WebP/AVIF provide even better compression and reproduction, but browser support is more limited. **Support**: Chrome, Edge, Firefox, IE, Opera, Safari.|
-|SVG|Scalable Vector Graphics|`image/svg+sml`|`.svg`|	Vector image format; ideal for user interface elements, icons, diagrams, etc., that must be drawn accurately at different sizes. **Support**: Chrome, Edge, Firefox, IE, Opera, Safari.|
+|SVG|Scalable Vector Graphics|`image/svg+sml`|`.svg`|Vector image format; ideal for user interface elements, icons, diagrams, etc., that must be drawn accurately at different sizes. **Support**: Chrome, Edge, Firefox, IE, Opera, Safari.|
 |WebP|Web Picture format|`image/webp`|`.webp`|Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc. AVIF offers slightly better compression, but is not quite as well-supported in browsers and does not support progressive rendering. **Support**: Chrome, Edge, Firefox, Opera, Safari|
 
 ### [Image file type details](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#image_file_type_details)
@@ -174,6 +176,7 @@ ___
 ## Using Color in CSS
 
 ### **Things that can have color**
+
 At the element level, everything in HTML can have color applied to it. Instead, let's look at things in terms of the kinds of things that are drawn in the elements, such as text and borders and so forth. For each, we'll see a list of the CSS properties that apply color to them.
 
 At a fundamental level, the `color` property defines the foreground color of an HTML element's content and the `background-color` property defines the element's background color. These can be used on just about any element.
@@ -184,7 +187,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 
 #### `color`
 
-The color to use when drawing the text and any text decorations (such as the addition of under- or overlines, strike-through lines, and so forth.
+The color to use when drawing the text and any text decorations (such as the addition of under- or overlines, strike-through lines, and so forth.)
 
 #### `background-color`
 
@@ -226,7 +229,7 @@ The color to use when drawing the line separating columns of text.
 
 The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document (so it may overlap other content). It's generally used as a focus indicator, to show which element will receive input events.
 
-### Borders
+### ***Borders***
 
 Any element can have a border drawn around it. A basic element border is a line drawn around the edges of the element's content. See The box model to learn about the relationship between elements and their borders, and the article Styling borders using CSS to learn more about applying styles to borders.
 
@@ -482,7 +485,7 @@ There are many situations in which your website may need to let the user select 
 
 The `<input>` element represents a color only in the hexadecimal string notation covered above.
 
-#### HTML
+#### ***HTML***
 
 The HTML here creates a box that contains a color picker control (with a label created using the `<label>` element) and an empty paragraph element (`<p>`) into which we'll output some text from our JavaScript code.
 
@@ -492,7 +495,7 @@ The HTML here creates a box that contains a color picker control (with a label c
       <p id="output"></p>
     </div>
 
-#### CSS
+#### ***CSS***
 
 The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color.
 
@@ -612,5 +615,237 @@ The five names are defined as follows:
 |monospace|Fonts where every character has the same width, typically used in code listings.|![monospace](monospace.png)|
 |cursive|Fonts that are intended to emulate handwriting, with flowing, connected strokes.|![cursive](cursive.png)|
 |fantasy|Fonts that are intended to be decorative.|![fantasy](fantasy.png)|
+
+### Font Stacks
+
+    p {
+      font-family: "Trebuchet MS", Verdana, sans-serif;
+    }
+
+### Font-Family Example
+
+Let's add to our previous example, giving the paragraphs a sans-serif font:
+
+    p {
+      color: red;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+### Font Size
+
+The `font-size` property can be set with the following:
+
+- `px`(pixels): The number of pixels high you want the text to be.
+- `em`: One `em` is equal to the font size set on the parent element of the current elemnt.
+- `rem`: These work the same as `em` except 1 `rem` is equal to the font size set on the root element of the document.
+
+### Font style, font weight, text transform, and text decoration
+
+- `font-style`: Used to turn italic text on or off. Possible values are as follows (you'll rarely use this, unless you want to turn some italic styling off for some reason):
+  - `normal`: Sets the text to the normal font (turns existing italics off).
+  - `italic`: Sets the text to use the italic version of the font, if available; if not, it will simulate italics with oblique instead.
+  - `oblique`: Sets the text to use a simulated version of an italic font, created by slanting the normal version.
+- `font-weight`: Sets how bold the text is. This has many values available in case you have many font variants available (such as -light, -normal, -bold, -extrabold, -black, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
+  - `normal`, `bold`: Normal and bold font weight.
+  - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
+  - `100` – `900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
+- `text-transform`: Allows you to set your font to be transformed. Values include:
+  - `none`: Prevents any transformation.
+  - `uppercase`: Transforms all text to capitals.
+  - `lowercase`: Transforms all text to lower case.
+  - `capitalize`: Transforms all words to have the first letter capitalized.
+  - `full-width`: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of, e.g., Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).
+- `text-decoration`: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them). Available values are:
+  - `none`: Unsets any text decorations already present.
+  - `underline`: Underlines the text.
+  - `overline`: Gives the text an overline.
+  - `line-through`: Puts a strikethrough over the text.
+
+You should note that `text-decoration` can accept multiple values at once if you want to add multiple decorations simultaneously, for example, `text-decoration: underline overline`. Also note that `text-decoration` is a shorthand property for `text-decoration-line`, `text-decoration-style`, and `text-decoration-color`. You can use combinations of these property values to create interesting effects, for example: `text-decoration: line-through red wavy`.
+
+    html {
+      font-size: 10px;
+    }
+
+    h1 {
+      font-size: 5rem;
+      text-transform: capitalize;
+    }
+
+    h1 + p {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: red;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+### Text Drop Shadows
+
+You can apply drop shadows to your text using the `text-shadow` property. This takes up to four values, as shown in the example below:
+
+    text-shadow: 4px 4px 5px red;
+
+The four properties are as follows:
+
+1. The horizontal offset of the shadow from the original text — this can take most available CSS length and size units, but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
+2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
+3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS length and size units.
+4. The base color of the shadow, which can take any CSS color unit. If not included, it defaults to `currentcolor`, i.e. the shadow's color is taken from the element's `color` property.
+
+### *Multiple shadows*
+
+You can apply multiple shadows to the same text by including multiple shadow values separated by commas, for example:
+
+    h1 {
+      text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+    }
+
+### Text Alginment
+
+The `text-align` property is used to control how text is aligned within its containing content box. The available values are listed below. They work in pretty much the same way as they do in a regular word processor application:
+
+- left: Left-justifies the text.
+- right: Right-justifies the text.
+- center: Centers the text.
+- justify: Makes the text spread out, varying the gaps in between the words so that all lines of text are the same width. You need to use this carefully — it can look terrible, especially when applied to a paragraph with lots of long words in it. If you are going to use this, you should also think about using something else along with it, such as `hyphens`, to break some of the longer words across lines.
+
+If we applied `text-align: center`; to the h1 in our example, we'd end up with this:
+
+    html {
+      font-size: 10px;
+    }
+
+    h1 {
+      font-size: 5rem;
+      text-transform: capitalize;
+      text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+      text-align: center;
+    }
+
+    h1 + p {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: red;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+### Line height
+
+The `line-height` property sets the height of each line of text. This property can not only take most length and size units, but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the `font-size` gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced). To set our lines of text to 1.6 times the height of the font, we'd use:
+
+    p {
+      line-height: 1.6;
+    }
+
+Applying this to the `<p>` elements in our example would give us this result:
+
+    html {
+      font-size: 10px;
+    }
+
+    h1 {
+      font-size: 5rem;
+      text-transform: capitalize;
+      text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+      text-align: center;
+    }
+
+    h1 + p {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: red;
+      font-family: Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+### Letter and word spacing
+
+The letter-spacing and word-spacing properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to obtain a specific look, or to improve the legibility of a particularly dense font. They can take most length and size units.
+
+To illustrate, we could apply some word- and letter-spacing to the first line of each `<p>` element in our HTML sample with:
+
+    p::first-line {
+      letter-spacing: 4px;
+      word-spacing: 4px;
+    }
+
+This renders our HTML as:
+
+    html {
+      font-size: 10px;
+    }
+
+    h1 {
+      font-size: 5rem;
+      text-transform: capitalize;
+      text-shadow: 1px 1px 1px red, 2px 2px 1px red;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    h1 + p {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: red;
+      font-family: Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      letter-spacing: 1px;
+    }
+
+### ***Other Properties***
+
+### **Font styles**
+
+- `font-variant`: Switch between small caps and normal font alternatives.
+- `font-kerning`: Switch font kerning options on and off.
+- `font-feature-settings`: Switch various OpenType font features on and off.
+- `font-variant-alternates`: Control the use of alternate glyphs for a given font-face.
+- `font-variant-caps`: Control the use of alternate capital glyphs.
+- `font-variant-east-asian`: Control the usage of alternate glyphs for East Asian scripts, like Japanese and Chinese.
+- `font-variant-ligatures`: Control which ligatures and contextual forms are used in text.
+- `font-variant-numeric`: Control the usage of alternate glyphs for numbers, fractions, and ordinal markers.
+- `font-variant-position`: Control the usage of alternate glyphs of smaller sizes positioned as superscript or subscript.
+- `font-size-adjust`: Adjust the visual size of the font independently of its actual font size.
+- `font-stretch`: Switch between possible alternative stretched versions of a given font.
+- `text-underline-position`: Specify the position of underlines set using the `text-decoration-line` property underline value.
+- `text-rendering`: Try to perform some text rendering optimization.
+
+### **Text layout styles**
+
+- `text-indent`: Specify how much horizontal space should be left before the beginning of the first line of the text content.
+- `text-overflow`: Define how overflowed content that is not displayed is signaled to users.
+- `white-space`: Define how whitespace and associated line breaks inside the element are handled.
+- `word-break`: Specify whether to break lines within words.
+- `direction`: Define the text direction. (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
+- `hyphens`: Switch on and off hyphenation for supported languages.
+- `line-break`: Relax or strengthen line breaking for Asian languages.
+- `text-align-last`: Define how the last line of a block or a line, right before a forced line break, is aligned.
+- `text-orientation`: Define the orientation of the text in a line.
+- `overflow-wrap`: Specify whether or not the browser may break lines within words in order to prevent overflow.
+- `writing-mode`: Define whether lines of text are laid out horizontally or vertically and the direction in which subsequent lines flow.
+
+### Font shorthand
+
+Many font properties can also be set through the shorthand property `font`. These are written in the following order: `font-style`, `font-variant`, `font-weight`, `font-stretch`, `font-size`, `line-height`, and `font-family`.
+
+Among all those properties, only `font-size` and `font-family` are required when using the `font` shorthand property.
+
+A forward slash has to be put in between the `font-size` and `line-height` properties.
+
+A full example would look like this:
+
+    font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 
 ___

@@ -2,7 +2,7 @@
 
 ## Reading
 
-[That Time When Women Stopped Coding]()
+[That Time When Women Stopped Coding](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding)
 
 ### Questions
 
@@ -15,9 +15,9 @@
 2. Exposure and Advertising
 
 
-[Review the Data]()
+[Review the Data](https://informationisbeautiful.net/visualizations/diversity-in-tech/)
 
-[Why diversity matters to your tech company]()
+[Why diversity matters to your tech company](https://www.usatoday.com/story/tech/columnist/2015/07/21/why-diversity-matters-your-tech-company/30419871/)
 
 ### Questions
 

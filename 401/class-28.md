@@ -17,4 +17,4 @@
 dynamic changes to the data set, such as adding or removing items, and supports different types of layouts and animations.
 
 2. 
-![RecyclerView](/recyclerView.png)
+![RecyclerView](../recyclerView.png)

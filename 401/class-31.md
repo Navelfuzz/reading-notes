@@ -1,6 +1,6 @@
 # CF 401: Java // Reading Notes
 
-## Class XX: XXXX
+## Class 31: AWS Amplify
 
 ## Readings
 

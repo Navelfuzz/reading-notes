@@ -1,6 +1,6 @@
 # CF 401: Java // Reading Notes
 
-## Class XX: XXXX
+## Class 34: Google App Publication
 
 ## Readings
 
